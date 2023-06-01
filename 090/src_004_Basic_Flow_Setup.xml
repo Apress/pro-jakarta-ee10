@@ -1,0 +1,6 @@
+...
+<h:form>
+  ...
+  <h:commandButton value="Finish" 
+        action="flow-name-return" />
+</h:form>

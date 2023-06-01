@@ -1,0 +1,6 @@
+...
+<h:form>
+  ...
+  <h:commandButton value="Enter Flow" 
+        action="flow-name"/>
+</h:form>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <recordList>
+    <record id="173658" type="cd" make="1733">
+      <fileType>wav</fileType>
+      <genre>classics</genre>
+      <composer>J.S. Bach</composer>
+      <title>Mass in B-flat Minor</title>
+      <performer>H. Masters</performer>
+    </record>
+    <record id="1734536" type="usb" make="2001">
+      <fileType>mp3</fileType>
+      <genre>rock</genre>
+      <composer>G. Jung</composer>
+      <title>Butterflies</title>
+      <performer>B. Hoyden</performer>
+    </record>
+  </recordList>
+</catalog>

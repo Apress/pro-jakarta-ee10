@@ -1,0 +1,6 @@
+<flow-definition id="flow-b">
+  <inbound-parameter>
+    <name>param1FromCallingFlow</name>
+    <value>#{someFlowBean.value}</value>
+  </inbound-parameter>
+</flow-definition>

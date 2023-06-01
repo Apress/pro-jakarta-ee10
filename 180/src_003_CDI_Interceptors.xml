@@ -1,0 +1,9 @@
+  <beans...>
+    ...
+   
+    <interceptors>
+      <class>
+        book.jakartapro.cdi.intercept.TracingInterceptorSys
+      </class>
+    </interceptors>
+</beans>

@@ -1,0 +1,8 @@
+  <flow-definition id="flow-name">
+    ...
+    <view id="flow-a-start">
+      <vdl-document>/flow-name/page1.xhtml</vdl-document>
+    </view>
+    <start-node>flow-a-start</start-node>
+
+  </flow-definition>

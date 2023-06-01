@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note the "packages" attribute - it must match -->
+<!-- the plugin class' package name                -->
+<Configuration xmlns:xi="http://www.w3.org/2001/XInclude" 
+      packages="book.jakartapro.restdate.log4j" 
+      status="DEBUG">
+    <Appenders>
+        <Console name="ConsoleAppender" 
+              target="SYSTEM_OUT">
+            <PatternLayout 
+                  pattern="%d [%p] %c{1} - %m%n"/>
+        </Console>
+        <StatisticsAppender name="StatisticsAppender"/>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="StatisticsAppender" />
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,9 @@
+<flow-call id="call-flow-b">
+  <flow-reference>
+    <flow-id>flow-b</flow-id>
+  </flow-reference>
+  <outbound-parameter>
+    <name>param1FromCallingFlow</name>
+    <value>the value</value>
+  </outbound-parameter>
+</flow-call>  

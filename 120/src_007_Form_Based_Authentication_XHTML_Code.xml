@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+  <title>Login Form</title>
+</h:head>
+<h:body>
+<h1>Please log in:</h1>
+<form method="post" action="j_security_check">
+  <table columns="2" role="presentation"> 
+    <tr>
+      <td><h:outputLabel for="j_username" 
+                 value="User name:"/></td>
+      <td><h:inputText id="j_username" autocomplete="off" 
+                 size="30" /></td>
+    </tr><tr>
+      <td><h:outputLabel for="j_password" 
+                 value="Password:"/></td>
+      <td><h:inputSecret id="j_password" autocomplete="off" 
+                 size="30"/></td>
+    </tr>
+  </table>
+  <div class="btnRow">
+    <h:commandButton type="submit" styleClass="submitBtn" 
+          value="Submit"/>
+    <h:commandButton type="reset" styleClass="resetBtn" 
+          value="Reset"/>
+  </div>
+</form>
+</h:body>
+</html>

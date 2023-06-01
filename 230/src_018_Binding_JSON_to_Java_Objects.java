@@ -1,0 +1,6 @@
+class Shape {
+  @JsonbTypeAdapter(MyColorAdapter.class) 
+  private Color color;
+  ...
+  // getters and setters...
+} 

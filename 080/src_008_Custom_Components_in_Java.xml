@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:h="jakarta.faces.html"
+  xmlns:f="jakarta.faces.core"
+  xmlns:ui="jakarta.faces.facelets"
+  xmlns:pt="jakarta.faces.passthrough"
+  xmlns:mytags="https://mycompany.com/mynamespace">
+<h:body>
+  ...
+  <mytags:custom-component ...> 
+      ...
+  </mytags:custom-component>
+  ...
+</h:body>
+</html>

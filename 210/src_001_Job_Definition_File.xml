@@ -1,0 +1,37 @@
+<job id="attendanceJob" 
+    xmlns="https://jakarta.ee/xml/ns/jakartaee" 
+    version="2.0">
+
+  <!-- Properties. Can be read from inside the code     -->
+  <properties>
+    <property name="input_file" 
+        value="/path/to/DATA_FOLDER/attendance.csv"/>
+    <property name="output_folder" 
+        value="/path/to/DATA_FOLDER/employee"/>
+  </properties>
+
+  <!-- One chunk step. ................................ -->
+  <!-- The "next" attribute tells which step to call    -->
+  <!-- next once this step finishes                     -->
+  <step id="attendance" next="cleanup">
+    <!-- We make this step a junk type step.            -->
+    <!-- Because of checkpoint-policy="item" the        -->
+    <!-- processing gets committed after each           -->
+    <!-- "item-count" processed items.                  -->
+    <!-- We define a reader, a processor and a writer   --> 
+    <chunk checkpoint-policy="item" item-count="10">
+      <reader ref="AttendanceReader"></reader>
+      <processor ref="AttendanceProcessor"></processor>
+      <writer ref="AttendanceWriter"></writer>
+    </chunk>
+  </step>
+
+  <!-- One cleanup step. Implemented by the class       -->
+  <!-- @Named "Cleanup"                                 -->
+  <!-- Because of the "end on" this is the last step    -->
+  <!-- of the job.                                      -->
+  <step id="cleanup">
+    <batchlet ref="Cleanup"></batchlet>
+    <end on="COMPLETED"/>
+  </step>
+</job>

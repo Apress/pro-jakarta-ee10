@@ -1,0 +1,24 @@
+    <!-- Caller: ############################# -->
+    <!-- original file                         -->
+    <DOCTYPE html>
+    <html ...><head>...</head>
+    <h:body>
+      ...
+      <ui:include src="table1_frag.xhtml"/>
+      ...
+    </h:body></html>
+
+    <!-- Callee: ############################# -->
+    <!-- table1_frag.xhtml                     -->
+    <div xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="jakarta.faces.html"
+	xmlns:f="jakarta.faces.core"
+	xmlns:ui="jakarta.faces.facelets"
+	xmlns:pt="jakarta.faces.passthrough">
+    <div>I am the table caption</div>
+    <ui:fragment>
+      <table>
+        [Some table|
+      </table>
+    </ui:fragment>
+    </div>

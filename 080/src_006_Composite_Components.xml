@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:h="jakarta.faces.html"
+  xmlns:f="jakarta.faces.core"
+  xmlns:ui="jakarta.faces.facelets"
+  xmlns:pt="jakarta.faces.passthrough"
+  xmlns:mytags="jakarta.faces.composite/mycomponents">
+<h:body>
+  ...
+  <mytags:labelAndField 
+      fieldId="zz9" 
+      labelTxt="The Label: " 
+      bindTo="#{someBean.someField}" />
+  ...
+</h:body>
+</html>

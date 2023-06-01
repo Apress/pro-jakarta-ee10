@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app ...>
+  ...
+  <context-param>
+    <param-name>javax.faces.FACELETS_LIBRARIES</param-name>
+    <param-value>/WEB-INF/mytaglib.taglib.xml</param-value>
+  </context-param>
+  ...
+</web-app>  

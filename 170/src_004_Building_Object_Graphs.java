@@ -1,0 +1,16 @@
+  public class SomeClass {
+    @Inject 
+    public SomeClass(Invoice inv) {
+        ...
+    }
+    ...
+  }
+
+  public class SomeClass {
+    ...
+    @Inject
+    public setInvoice(Invoice inv) {
+        ...
+    }
+    ...
+  }

@@ -1,0 +1,8 @@
+  <flow-definition id="flow-name">
+    ...
+    <flow-return id="returnFromFlow">
+      <!-- <from-outcome>#{someBean.returnValue}</from-outcome>  -->
+      <from-outcome>/start</from-outcome>
+    </flow-return>
+
+  </flow-definition>

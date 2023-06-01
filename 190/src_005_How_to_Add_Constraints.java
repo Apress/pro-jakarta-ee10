@@ -1,0 +1,9 @@
+class Person {
+  public Person(@NotNull @Size(max=30) String name) {
+      ...
+  }
+  ...
+  public void setEmail(@Email email) {
+      ...
+  }
+}

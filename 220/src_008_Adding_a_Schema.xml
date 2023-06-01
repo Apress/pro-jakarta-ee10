@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:tns="http://book.jakartapro.catalog"
+    targetNamespace="http://book.jakartapro.catalog">
+
+  <xs:element name="catalog" type="tns:catalogType" />
+
+  <xs:complexType name="catalogType">
+    <xs:sequence>
+      <xs:element name="recordList" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="record" 
+                type="tns:recordType" 
+                minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="recordType">
+    <xs:sequence>
+      <xs:element name="fileType" type="xs:string" 
+          minOccurs="0"/>
+      <xs:element name="genre" type="xs:string" 
+          minOccurs="0"/>
+      <xs:element name="composer" type="xs:string" 
+          minOccurs="0"/>
+      <xs:element name="title" type="xs:string" 
+          minOccurs="0"/>
+      <xs:element name="performer" type="xs:string" 
+          minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:long" 
+        use="required"/>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="make" type="xs:int" 
+        use="required"/>
+  </xs:complexType>
+</xs:schema>

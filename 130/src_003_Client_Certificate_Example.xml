@@ -1,0 +1,95 @@
+beans.xml:
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+	    https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd"
+	bean-discovery-mode="all" version="3.0">
+</beans>
+
+
+faces-config.xml:
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+        https://jakarta.ee/xml/ns/jakartaee/
+        web-facesconfig_4_0.xsd"
+    version="4.0">
+<application>
+  <resource-bundle>
+    <base-name>
+      book.jakartapro.clientcertauth.web.WebMessages
+    </base-name>
+    <var>bundle</var>
+  </resource-bundle>
+  <locale-config>
+    <default-locale>en</default-locale>
+    <!-- <supported-locale>es</supported-locale> -->
+  </locale-config>
+</application>
+</faces-config>      
+
+glassfish-web.xml:
+<?xml version="1.0" encoding="UTF-8"?>
+<glassfish-web-app error-url="">    
+    <security-role-mapping>
+        <role-name>admin</role-name>
+        <group-name>authorized</group-name>
+    </security-role-mapping>
+    <class-loader delegate="true"/>
+</glassfish-web-app>
+
+web.xml:
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+  xmlns:xsi=
+    "http://www.w3.org/2001/XMLSchema-instance"
+  xmlns=
+    "http://xmlns.jcp.org/xml/ns/javaee"
+  xsi:schemaLocation=
+    "http://xmlns.jcp.org/xml/ns/javaee
+     http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  id="WebApp_ID"
+  version="4.0">
+  <welcome-file-list>
+    <welcome-file>index.xhtml</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>
+      jakarta.faces.webapp.FacesServlet
+    </servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  <security-constraint>
+      <display-name>Admin Constraint</display-name>
+      <web-resource-collection>
+        <web-resource-name>members</web-resource-name>
+        <description />
+        <url-pattern>/admin/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+        <description />
+        <role-name>admin</role-name>
+      </auth-constraint>
+      <user-data-constraint>
+        <transport-guarantee>
+          CONFIDENTIAL
+        </transport-guarantee>
+      </user-data-constraint>
+  </security-constraint>
+  <login-config>
+    <auth-method>CLIENT-CERT</auth-method>
+    <realm-name>certificate</realm-name>
+  </login-config>
+  <security-role>
+      <description/>
+      <role-name>admin</role-name>
+  </security-role>
+</web-app>

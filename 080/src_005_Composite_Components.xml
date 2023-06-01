@@ -1,0 +1,22 @@
+<html xmlns:h="jakarta.faces.html"
+  xmlns:f="jakarta.faces.core"
+  xmlns:ui="jakarta.faces.facelets"
+  xmlns:pt="jakarta.faces.passthrough"
+  xmlns:composite="jakarta.faces.composite">
+
+<!-- ................ INTERFACE ................ -->
+<composite:interface>
+	<composite:attribute name="fieldId" />
+	<composite:attribute name="labelTxt" />
+	<composite:attribute name="bindTo" />
+</composite:interface>	
+	
+<!-- ................ IMPLEMENTATION ........... -->
+<composite:implementation>
+  <h:outputLabel for="#{cc.attrs.fieldId}" 
+      value="#{cc.attrs.labelTxt}" />
+  <h:inputText id="#{cc.attrs.fieldId}"  
+      value="#{cc.attrs.bindTo}" />
+</composite:implementation>
+
+</html>

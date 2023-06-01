@@ -1,0 +1,6 @@
+...
+<h:form>
+  ...
+  <h:commandButton value="Finish" 
+        action="returnFromFlow" />
+</h:form>

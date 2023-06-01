@@ -1,0 +1,12 @@
+<html xmlns:h="jakarta.faces.html"
+	xmlns:f="jakarta.faces.core"
+	xmlns:ui="jakarta.faces.facelets"
+	xmlns:pt="jakarta.faces.passthrough">	
+<ui:composition>
+
+<h:inputText id="#{idParam}" value="#{valueParam}">
+  <f:validateRegex pattern="\d{4}-\d{2}-\d{2}" />
+</h:inputText>
+
+</ui:composition>
+</html>

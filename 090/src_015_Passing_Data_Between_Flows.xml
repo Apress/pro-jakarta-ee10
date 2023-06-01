@@ -1,0 +1,13 @@
+  <flow-definition id="flow-name">
+    ...
+    <!-- possibly: -->
+    <flow-return ...>
+        ....
+    </flow-return>
+
+    <flow-call id="call-flow-b">
+        <flow-reference>
+            <flow-id>flow-b</flow-id>
+        </flow-reference>
+    </flow-call>
+  </flow-definition>

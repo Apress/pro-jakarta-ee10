@@ -1,0 +1,7 @@
+<beans...>
+  ...
+ 
+  <decorators>
+    <class>book.jakartapro.cdi.decorate.ProcessorImplNew</class>
+  </decorators>
+</beans>

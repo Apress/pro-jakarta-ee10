@@ -1,0 +1,103 @@
+<!-- File titles.xhtml ********************** -->
+<html xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:pt="jakarta.faces.passthrough">
+<h:body>
+<ui:composition template="frame.xhtml">
+
+  <ui:define name="header">
+    <ui:include src="common/commonHeader.xhtml" />
+  </ui:define>
+
+  <ui:define name="menu">
+    <ui:include src="common/commonMenu.xhtml" />
+  </ui:define>
+
+  <ui:define name="contents">
+    <h2>Titles</h2>
+    <ul>			
+      <ui:repeat var="t" value="#{titles.titles}" 
+            varStatus="status">
+        <li><h:outputText value="#{t}" /></li>
+      </ui:repeat>
+    </ul>
+  </ui:define>
+
+  <ui:define name="footer">
+    <ui:include src="common/commonFooter.xhtml" />
+  </ui:define>
+
+</ui:composition>
+</h:body>
+</html>
+
+
+<!-- File composers.xhtml ********************** -->
+<html xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:pt="jakarta.faces.passthrough">
+<h:body>
+<ui:composition template="frame.xhtml">
+
+  <ui:define name="header">
+    <ui:include src="common/commonHeader.xhtml" />
+  </ui:define>
+
+  <ui:define name="menu">
+    <ui:include src="common/commonMenu.xhtml" />
+  </ui:define>
+
+  <ui:define name="contents">
+    <h2>Composers</h2>
+    <ul>			
+      <ui:repeat var="c" value="#{composers.composers}" 
+            varStatus="status">
+        <li><h:outputText value="#{c}" /></li>
+      </ui:repeat>
+     </ul>
+  </ui:define>
+
+  <ui:define name="footer">
+    <ui:include src="common/commonFooter.xhtml" />
+  </ui:define>
+
+</ui:composition>
+</h:body>
+</html>
+
+
+<!-- File performers.xhtml ********************** -->
+<html xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:pt="jakarta.faces.passthrough">
+<h:body>
+<ui:composition template="frame.xhtml">
+
+  <ui:define name="header">
+    <ui:include src="common/commonHeader.xhtml" />
+  </ui:define>
+
+  <ui:define name="menu">
+    <ui:include src="common/commonMenu.xhtml" />
+  </ui:define>
+
+  <ui:define name="contents">
+    <h2>Performers</h2>
+    <ul>			
+      <ui:repeat var="p" value="#{performers.performers}" 
+            varStatus="status">
+        <li><h:outputText value="#{p}" /></li>
+      </ui:repeat>
+    </ul>
+  </ui:define>
+
+  <ui:define name="footer">
+    <ui:include src="common/commonFooter.xhtml" />
+  </ui:define>
+
+</ui:composition>
+</h:body>
+</html>

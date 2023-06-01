@@ -1,0 +1,32 @@
+<!-- File commonHeader.xhtml --> 
+<!DOCTYPE html>
+<div xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:pt="jakarta.faces.passthrough">
+  <h2>Musicbox</h2>
+</div>
+
+<!-- File commonMenu.xhtml --> 
+<!DOCTYPE html>
+<div xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:pt="jakarta.faces.passthrough">
+	
+  <ul>
+    <li><a href="titles.xhtml">Titles</a></li>
+    <li><a href="composers.xhtml">Composers</a></li>
+    <li><a href="performers.xhtml">Performers</a></li>
+  </ul>
+</div>
+
+<!-- File commonFooter.xhtml -->
+<!DOCTYPE html>
+<div xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:pt="jakarta.faces.passthrough">
+	
+  (c) The Musicbox company 2019
+</div>

@@ -1,0 +1,2 @@
+<h:commandButton value="Finish" 
+      action="flow-name-return" />

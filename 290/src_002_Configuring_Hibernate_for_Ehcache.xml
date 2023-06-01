@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="ehcache.xsd" 
+  updateCheck="true"
+  monitoring="autodetect" 
+  dynamicConfig="true">
+<diskStore path="java.io.tmpdir/ehcache" />
+<defaultCache 
+    maxElementsInMemory="1000" 
+    eternal="false"
+    timeToIdleSeconds="3" 
+    timeToLiveSeconds="120" 
+    overflowToDisk="true" 
+    statistics="true" />
+<cache name="Region1" 
+    maxElementsInMemory="100" 
+    eternal="false"
+    timeToIdleSeconds="3" 
+    timeToLiveSeconds="120" 
+    overflowToDisk="false"
+    statistics="true" />
+</ehcache>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REST Security</title>
+<link rel="stylesheet" type="text/css" 
+  href="css/styles.css" />
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/script.js"></script>
+</head>
+
+<body>
+  <div>
+    User:<input id="user" type="text" /> 
+    Password: <input id="passwd" type="text" />
+    <button id="loginButton">Login</button>
+    <button id="logoutButton">Logout</button>
+  </div>
+
+  <div>
+    <button id="accessUnsecuredButton">Access Unsecured</button>
+    <button id="accessSecuredButton">Access Secured</button>
+  </div>
+
+  <div class="clearfloat"></div>  
+  <div id="errOutput" class="err"></div>
+  <div class="clearfloat"></div>
+  <div id="output"></div>
+</body>
+
+</html>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <persistence ...>
+   <persistence-unit ...>
+      <!-- Make sure Hibernate gets used -->
+      <provider>
+          org.hibernate.jpa.HibernatePersistenceProvider
+      </provider>
+      ...
+      <properties>
+         ...
+         <property 
+            name="hibernate.cache.use_second_level_cache" 
+            value="true"/>
+         <property 
+            name="hibernate.cache.use_query_cache" 
+            value="true"/>
+         <property 
+            name="hibernate.cache.region.factory_class"
+            value="org.hibernate.cache.ehcache.
+                   SingletonEhCacheRegionFactory"/>
+         <property 
+            name="hibernate.cache.ehcache.
+                  missing_cache_strategy" 
+            value="create"/>
+         <property name="hibernate.generate_statistics" 
+            value="true"/>
+         <property name="hibernate.jmx.enabled" 
+            value="true"/>
+         <property name="hibernate.jmx.usePlatformServer" 
+            value="true"/>
+      </properties>
+   </persistence-unit>
+</persistence>
